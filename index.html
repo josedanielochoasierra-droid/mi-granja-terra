@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi Granja</title>
+<style>
+body {         background:#f0fdf4; text-align:center       }
+h1 { color:#166534; }
+</style>
+</head>
+<body>
+<h1>Mi Granja Terra</h1>
+<p>Bienvenido a mi granja virtual</p>
+<div style="font-size: 80px;cursor: pointer;">
+<span onclick="alimentarVaca()">🐄</span>
+<span onclick="alimentarPollo()">🐔</span>
+<span onclick="alimentarOveja()">🐑</span>
+<span onclick="alimentarCerdo()">🐖</span>
+<script>
+let hambreVaca = 100;
+function alimentarVaca(){
+hambreVaca = hambreVaca + 20;
+alert('¡Muuu! Gracias, ahora tengo ' + hambreVaca + ' de hambre');
+}
+let hambrePollo = 100;
+function alimentarPollo() {
+hambrePollo = hambrePollo + 20;
+alert('¡Kikiriki! Gracias, ahoratengo ' + hambrePollo + ' de hambre');
+}
+let hambreOveja = 100;
+function alimentarOveja() {
+hambreOveja = hambreOveja + 20;
+alert('¡Beee! Gracias, ahora tengo ' + hambreOveja + ' de hambre');
+}
+let hambreCerdo = 100;
+function alimentarCerdo() {
+hambreCerdo = hambreCerdo + 20;
+alert('¡Oink! Gracias, ahora tengo ' + hambreCerdo + ' de hambre');
+}
+setInterval(function(){
+hambreVaca = hambreVaca - 2;
+hambrePollo = hambrePollo - 2;
+hambreOveja = hambreOveja - 2;
+hambreCerdo = hambreCerdo - 2;
+if(hambreVaca < 0) hambreVaca = 0;
+if(hambrePollo < 0) hambrePollo = 0;
+if(hambreOveja < 0) hambreOveja = 0;
+if(hambreCerdo < 0) hambreCerdo = 0;
+}, 3000);
+</script>
+</body>
+</html>
